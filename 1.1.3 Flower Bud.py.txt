@@ -1,0 +1,24 @@
+# This colors the canvas 'slateGrey'.
+app.background = 'slateGrey'
+
+# Draws the clouds.
+Circle(80, 0, 100, fill='lightSteelBlue')
+Circle(200, 0, 100, fill='lightSteelBlue')
+Circle(320, 0, 100, fill='lightSteelBlue')
+
+# Draws the rain.
+Circle(250, 125, 5, fill='deepSkyBlue')
+Circle(150, 175, 5, fill='deepSkyBlue')
+Circle(200, 225, 5, fill='deepSkyBlue')
+
+# Draw the bushes.
+### (HINT: Remember that the order you draw the circles matters!)
+### Place Your Code Here ##
+
+
+Circle(200, 360, 75, fill='darkGreen')
+Circle(150, 380, 65, fill='green')
+Circle(250, 380, 65, fill='green')
+# Draw the flower bulb at the top of the bushes.
+### Place Your Code Here ###
+Circle(200, 280, 12, fill='gold')
