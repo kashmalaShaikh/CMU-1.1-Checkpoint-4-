@@ -1,0 +1,26 @@
+# This line of code sets the background of the canvas to the color 'lightBlue'
+# instead of 'white'. You can leave it alone for this exercise.
+app.background = 'lightSkyBlue'
+
+# This draws the clouds.
+Circle(80, 100, 25, fill='white')
+Circle(120, 100, 25, fill='white')
+Circle(100, 100, 25, fill='white')
+Circle(110, 90, 25, fill='white')
+Circle(90, 90, 25, fill='white')
+
+# Draw the sun.
+### Place Your Code Here ###
+Circle(300, 50, 50, fill='yellow')
+
+
+# This draws the bush.
+Circle(30, 400, 50, fill='darkGreen')
+Circle(70, 400, 50, fill='darkGreen')
+Circle(20, 370, 5, fill='red')
+Circle(75, 360, 5, fill='red')
+Circle(55, 385, 5, fill='red')
+
+
+# Draw the berries.
+### Place Your Code Here ###
