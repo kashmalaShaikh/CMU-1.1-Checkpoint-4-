@@ -1,0 +1,32 @@
+# This colors the canvas 'skyBlue'.
+app.background = 'skyBlue'
+Circle(400,0 , 300, fill='darkSlateBlue')
+Circle(0,400 , 300, fill='darkSlateBlue')
+
+# Draw the two big, purple circles.
+### (HINT: Where are their centers? Use the Inspector to find them!)
+### Place Your Code Here ###
+
+# Draw the two orange circles.
+### Place Your Code Here ###
+Circle(130,270 , 22, fill='orange')
+Circle(340,60 , 22, fill='orange')
+# This draws the white circles in the bottom-left.
+    Circle(72, 212, 30, fill='white')
+Circle(188, 212, 30, fill='white')
+Circle(188, 328, 30, fill='white')
+Circle(72, 328, 30, fill='white')
+Circle(130, 190, 30, fill='white')
+Circle(210, 270, 30, fill='white')
+Circle(130, 350, 30, fill='white')
+Circle(50, 270, 30, fill='white')
+
+# This draws the white circles in the top-right.
+Circle(316, 36, 8, fill='white')
+Circle(364, 36, 8, fill='white')
+Circle(364, 84, 8, fill='white')
+Circle(316, 84, 8, fill='white')
+Circle(340, 25, 8, fill='white')
+Circle(375, 60, 8, fill='white')
+Circle(340, 95, 8, fill='white')
+Circle(305, 60, 8, fill='white')
