@@ -1,0 +1,8 @@
+# This draws the pan!
+Circle(200, 200, 180)
+Circle(165, 235, 80, fill="white")
+Circle(390, 200, 45, fill="black")
+# Draw the egg using the inspector to find information about the two circles.
+### (HINT: Remember to Check Code when you are done!)
+### Place Your Code Here ###
+Circle(180, 250, 35, fill="gold")
