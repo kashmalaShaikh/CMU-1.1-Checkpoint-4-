@@ -1,0 +1,17 @@
+# Draws the whole apple.
+Circle(200, 200, 150, fill='red')
+
+# Create the dent in the top of the apple and add a stem.
+### (HINT: The dent is a circle that covers part of the apple.)
+### Place Your Code Here ###
+
+Circle(200, 20, 50, fill='white')
+Circle(200, 60, 10, fill='sienna')
+# Draw the bite marks in the apple. They are created using 2 circles each.
+### (HINT: If you're stuck, look at how we drew the moon in the last notes
+#          checkpoint. Maybe it will give you an idea!)
+### Place Your Code Here ###
+Circle(320, 150, 60, fill='wheat')
+Circle(330, 250, 75, fill='wheat')
+Circle(365, 150, 85, fill='white')
+Circle(380, 250, 110, fill='white')
