@@ -1,0 +1,7 @@
+# Draw a circle below so that My Canvas and Solution produce the same image.
+# Recall that a Circle is drawn using:
+#   Circle(centerX, centerY, radius, fill='color')
+### (HINT: Use the Inspector by moving your mouse over the circle in the Solution
+#          to see information about it pop up in the top-right of the canvas.)
+### Place Your Code Here ###
+Circle(250,300,45,  fill='deeppink')
