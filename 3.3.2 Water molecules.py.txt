@@ -1,0 +1,29 @@
+app.background = gradient('lightBlue', 'lightSkyBlue',start='top')
+
+# oxygen and hydrogen atoms
+o = Circle(200, 200, 40, fill=gradient('orangeRed', 'crimson', start='top'))
+h1 = Circle(0, 400, 25, fill=gradient('white', 'silver'))
+h2 = Circle(400, 400, 25, fill=gradient('white', 'silver'))
+
+def onStep():
+    # Move both of the hydrogen atoms (h1 and h2) by 5 both up and left or right.
+    # They should stop moving when the left hydrogen's center reaches
+    # the left edge of the oxygen.
+    ### (HINT: The left edge of the oxygen has an x value of its centerX minus
+    #          its radius!)
+    ### Place Your Code Here ###
+    if (h1.centerX < 160):
+        h1.centerX += 5
+        h1.centerY -= 5
+        h2.centerY -= 5
+        h2.centerX -= 5 
+
+    # Only draw these labels when the hydrogen atoms are done moving.
+    ### Fix Your Code Here ###
+    else:
+        Label("We've created a molecule of water! H2O!", 200, 40, fill='red',
+          size=15)
+        Label('H', h1.centerX, h1.centerY, size=20)
+        Label('H', h2.centerX, h2.centerY, size=20)
+        Label('O', 200, 200, size=20)
+    app.paused = True
