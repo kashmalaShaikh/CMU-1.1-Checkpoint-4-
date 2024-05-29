@@ -1,0 +1,75 @@
+app.background = gradient('midnightBlue', 'mediumBlue', start='top')
+Oval(200, 368, 1500, 100, fill=gradient('navajoWhite', 'sandyBrown', start='top'))
+
+# This draws the sky.
+Circle(70, 70, 30, fill=gradient(rgb(60, 60, 60), 'lightGrey', start='left-top'))
+Star(300, 150, 4, 4, fill='yellow')
+Star(200, 100, 3, 4, fill='yellow')
+Star(350, 50, 5, 4, fill='yellow')
+Star(150, 70, 4, 4, fill='yellow')
+Star(100, 200, 3, 4, fill='yellow')
+Star(220, 180, 4, 4, fill='yellow')
+Star(50, 140, 5, 4, fill='yellow')
+Star(130, 145, 2, 4, fill='yellow')
+Star(360, 230, 4, 4, fill='yellow')
+Star(250, 50, 3, 4, fill='yellow')
+Star(170, 230, 3, 4, fill='yellow')
+Star(40, 235, 3, 4, fill='yellow')
+
+# This draws the beware sign.
+Line(270, 295, 270, 330, fill='grey', lineWidth=5)
+Line(330, 295, 330, 330, fill='grey', lineWidth=5)
+Rect(250, 235, 100, 60,
+     fill=gradient('khaki', 'yellow', 'yellow', start='top'), border='black')
+Label('BEWARE', 300, 250)
+Oval(300, 274, 40, 20)
+Oval(300, 274, 40, 20)
+Oval(300, 268, 25, 15, fill='yellow')
+Oval(300, 266, 25, 15)
+Circle(300, 278, 2, fill='lightYellow')
+Line(280, 280, 275, 285)
+Line(290, 285, 288, 290)
+Line(310, 285, 312, 290)
+Line(320, 280, 325, 285)
+
+# This draws the rocks.
+Oval(35, 345, 5, 2, fill=gradient('lime', 'green', start='top'))
+Oval(105, 335, 5, 2, fill=gradient('lime', 'green', start='top'))
+Oval(220, 350, 5, 2, fill=gradient('lime', 'green', start='top'))
+Oval(340, 370, 5, 2, fill=gradient('lime', 'green', start='top'))
+Oval(140, 380, 5, 2, fill=gradient('lime', 'green', start='top'))
+Oval(75, 360, 5, 2, fill=gradient('sienna', 'grey', start='top'))
+Oval(75, 360, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+Oval(175, 340, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+Oval(260, 390, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+Oval(370, 340, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+Oval(285, 345, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+Oval(10, 390, 8, 4, fill=gradient('sienna', 'grey', start='top'))
+
+# This creates the ufos group.
+ufos = Group()
+ufos.speedX = 20
+ufos.speedY = -5
+
+def onStep():
+    # This moves the ufos group.
+    ufos.centerX = ufos.centerX + ufos.speedX
+    ufos.centerY = ufos.centerY + ufos.speedY
+
+def onMousePress(mouseX, mouseY):
+    # When the mouse is clicked in the top half of the canvas, draw a ufo and
+    # add each shape to the ufos group.
+    ### (HINT: The dimGrey oval is built at (mouseX, mouseY). This should
+    #          help you get started!)
+    ### (HINT: Some test cases click in the canvas and immediately pause. Use
+    #          them to find the positions of all the shapes!)
+    ### Place Your Code Here ###
+    if(mouseY < 200):
+        ufos.add (
+            Oval(mouseX, mouseY+2, 40, 20, fill ='cyan'),
+            Oval(mouseX, mouseY,40, 20, fill='dimGrey'),
+            Circle(mouseX, mouseY +1, 2, fill ='yellow'),
+            Oval(mouseX, mouseY -8, 5, 8, fill='lime'),
+            Oval(mouseX, mouseY - 8, 25, 15, fill ='lightGrey', opacity= 60),
+            )
+    pass
