@@ -1,0 +1,14 @@
+app.background = 'peachPuff'
+
+# This draws the stars.
+Star(100, 90, 105, 8)
+Star(100, 90, 100, 8, fill=gradient('red', 'orange', 'yellow'))
+Star(250, 250, 180, 8, fill='white')
+Star(250, 250, 170, 8, fill=gradient('green', 'blue', 'purple'))
+
+# Draw the KAPOW! and BAM! labels.
+### (HINT: The inspector gives a lot of information for labels. That will
+#          be helpful!)
+### Place Your Code Here ###
+Label('BAM!', 100, 90, fill='white', size=40, font='monospace', italic= True)
+Label('KAPOW!', 250, 250, fill='white', bold=True, size=60, font='monospace')
