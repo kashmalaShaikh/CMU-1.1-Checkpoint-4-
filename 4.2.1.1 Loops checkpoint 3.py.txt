@@ -1,0 +1,29 @@
+app.background = gradient('midnightBlue', 'steelBlue', start='top')
+
+# This draws the grass.
+Oval(370, 440, 800, 200, fill='mediumSeaGreen')
+Oval(130, 450, 800, 200, fill='forestGreen')
+
+bubbles = Group()
+
+spikes = Star(200, 300, 25, 3, fill='silver', roundness=20)
+
+def onMousePress(mouseX, mouseY):
+    bubbles.add(
+        Circle(mouseX, 0, 25, border='white', opacity=50,
+               fill=gradient('white', 'lightBlue', start='top-right'))
+        )
+
+def onMouseMove(mouseX, mouseY):
+    spikes.centerX = mouseX
+
+def onStep():
+    # Move each bubble down by 4. If the bubble touches the spikes, it should be
+    # remove from the group.
+    ### (HINT: You'll need to use a shape method here!)
+    ### Place Your Code Here ###
+    bubbles.centerY += 4
+    for bubble in bubbles:
+       if(bubble.hitsShape(spikes) == True):
+            bubbles.remove(bubble)
+    
