@@ -1,0 +1,40 @@
+app.background = 'forestGreen'
+
+# This draws the field.
+Rect(30, 250, 340, 165, fill='forestGreen', border='white', borderWidth=4)
+Line(0, 50, 400, 50, fill='ghostWhite', lineWidth=4)
+
+# This draws the soccer ball.
+Circle(200, 130, 10, fill='ghostWhite')
+Oval(194, 130, 5, 10)
+Oval(203, 135, 5, 10, rotateAngle=40)
+Oval(203, 124, 5, 8, rotateAngle=-45)
+
+# This draws the net.
+Line(45, 400, 355, 400, fill='ghostWhite', lineWidth=15, dashes=True)
+Line(45, 385, 355, 385, fill='lightGrey', lineWidth=8)
+Line(45, 385, 45, 400, fill='lightGrey', lineWidth=8)
+Line(355, 385, 355, 400, fill='lightGrey', lineWidth=8)
+
+Circle(245, 65, 20)
+
+goalie = Circle(200, 350, 20)
+goalie.speedX = 0
+
+def onKeyPress(key):
+    # Set the goalie's speed if the left or right arrow keys are pressed.
+    ### (HINT: The goalie should move by 15 either to the left or right on
+    #          each step.)
+    ### Place Your Code Here ###
+    if(key == "left"):
+        goalie.speedX = -15 
+    if (key == "right"):
+       goalie.speedX = 15
+
+    
+    pass
+
+def onStep():
+    # This moves the goalie once its speed isn't 0.
+    goalie.centerX = goalie.centerX + goalie.speedX
+    
