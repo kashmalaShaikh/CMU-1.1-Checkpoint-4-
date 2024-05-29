@@ -1,0 +1,12 @@
+app.background = 'royalBlue'
+
+# lilypads
+Circle(70, 50, 40, fill=gradient('limeGreen', 'forestGreen'))
+Circle(350, 175, 30, fill=gradient('limeGreen', 'forestGreen'))
+Star(105, 30, 35, 3, fill='royalBlue')
+
+# These ripples don't quite look right. Fix them so they match the solution!
+### Place Your Code Here ###
+Circle(125, 275, 75, fill='mediumBlue', opacity=30)
+Circle(125, 275, 50, fill='mediumBlue', opacity=60)
+Circle(125, 275, 25, fill='mediumBlue',  opacity=90)
