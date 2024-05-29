@@ -1,0 +1,31 @@
+app.background = gradient('seaGreen', 'darkGreen', start='bottom')
+
+vine = Line(200, 0, 200, 250, fill='paleGreen', lineWidth=6)
+vine.swingSpeed = 3
+
+Star(50, 20, 120, 13, fill='mediumSeaGreen', roundness=80)
+Star(155, 50, 80, 13, fill='darkSeaGreen', roundness=85)
+Star(320, 30, 100, 13, fill='darkSeaGreen', roundness=85)
+Star(220, 0, 140, 17, fill='mediumSeaGreen', roundness=92)
+
+leftGround = Rect(0, 220, 80, 180,
+                  fill=gradient('oliveDrab', 'sienna', start='right-top'))
+rightGround = Rect(320, 245, 80, 155,
+                   fill=gradient('oliveDrab', 'sienna', start='left-top'))
+
+Rect(80, 380, 240, 20, fill='darkBlue')
+
+def onStep():
+    # Swing the vine by rotating it with its swinging speed custom property.
+    # When it has rotated more than 45 or less than -45 degrees, change the
+    # direction it swings.
+    ### (HINT: Look at how the vine is drawn. The part we can see is only the
+    #          bottom half!)
+    vine.rotateAngle = vine.rotateAngle + vine.swingSpeed 
+    if(vine.rotateAngle > 45):
+        vine.swingSpeed *= -1
+    if(vine.rotateAngle < -45):
+        vine.swingSpeed *= -1
+        
+        
+    pass
