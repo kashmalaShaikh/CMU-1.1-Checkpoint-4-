@@ -1,0 +1,29 @@
+app.background = gradient('navy', 'dodgerBlue', start='top')
+
+# Draw the hedgehog's spikes (the animal on the left).
+### (HINT: If the inspector shows you information about a Star, all of the
+#          info you see is about the spikes!)
+### Place Your Code Here ###
+
+# Draws the hedgehog's face.
+
+
+Star( 75, 360, 100, 60, fill='saddleBrown', roundness=80)
+Circle(35, 340, 15, fill='navajoWhite', border='tan', borderWidth=5)
+Circle(115, 340, 15, fill='navajoWhite', border='tan', borderWidth=5)
+Circle(75, 375, 50, fill='tan')
+Circle(60, 360, 4)
+Circle(90, 360, 4)
+Circle(75, 390, 7)
+
+# Draw the porcupine's spikes (the animal on the right).
+### Place Your Code Here ###
+Star( 325, 360, 135, 30, roundness=55, fill=gradient('saddleBrown', 'saddleBrown', 'tan'))
+
+# Draws the porcupine's face.
+Circle(365, 340, 15, fill='navajoWhite', border='tan', borderWidth=5)
+Circle(285, 340, 15, fill='navajoWhite', border='tan', borderWidth=5)
+Circle(325, 375, 50, fill='tan')
+Circle(340, 360, 4)
+Circle(310, 360, 4)
+Circle(325, 390, 7)
