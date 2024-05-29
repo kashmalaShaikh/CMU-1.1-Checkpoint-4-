@@ -1,0 +1,16 @@
+cursor = Line(10, 190, 10, 210, lineWidth=1)
+
+def onKeyPress(key):
+    # If the key is not the backspace key, draw the key where the cursor is,
+    # and move the cursor forward.
+    ### Place Your Code Here ###
+     if (key != 'backspace'):
+        Label(key, cursor.centerX, cursor.centerY, size = 15)
+        cursor.centerX += 20
+    # If the backspace key is pressed, move the cursor back and draw a rectangle
+    # to cover the previous letter.
+    ### Place Your Code Here ###
+    if (key == 'backspace'):
+        cursor.centerX -= 20
+        Rect(cursor.centerX-10,cursor.centerY-10, 20, 20, fill='white')
+    pass
