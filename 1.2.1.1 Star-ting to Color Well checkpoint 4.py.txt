@@ -1,0 +1,14 @@
+app.background = 'black'
+
+# Change the moon to have a gradient.
+### (HINT: The inspector doesn't tell you what start the gradient has, only
+#          the colors. You need to figure out the start yourself!)
+### Fix Your Code Here ###
+Circle(250, 160, 150, fill=gradient('dimGray','beige', start= 'right'))
+
+# Draw the big crater.
+### Place Your Code Here ###
+Circle(165, 120, 40, fill=gradient('beige', 'darkGray', start= 'right'))
+# This draws the two small craters.
+Circle(235, 240, 20, fill=gradient('gray', 'beige', start='left'))
+Circle(345, 155, 25, fill=gradient('dimGray', 'darkGray', start='left'))
