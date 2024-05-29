@@ -1,0 +1,15 @@
+app.background = 'forestGreen'
+
+# Draws the path and grass.
+Circle(400, 100, 400, fill='wheat')
+Circle(400, 100, 280, fill='forestGreen')
+
+# Draws the puddles.
+Circle(50, 330, 30, fill='steelBlue')
+Circle(30, 30, 30, fill='steelBlue')
+Circle(300, 0, 100, fill='steelBlue')
+Circle(200, 225, 80, fill='steelBlue')
+
+# Draw the two umbrellas.
+### Place Your Code Here ###
+Circle(100, 75, 70)
