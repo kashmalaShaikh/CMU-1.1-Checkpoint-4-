@@ -1,0 +1,16 @@
+app.background = 'aliceBlue'
+
+greenCircle = Circle(0, 200, 30, fill='seaGreen')
+greenCircle.speedX = 1
+
+orangeCircle = Circle(200, 400, 30, fill='darkOrange')
+orangeCircle.speedY = -2
+
+def onStep():
+    # Move greenCircle to the right and orangeCircle up.
+    ### (HINT: We have created two custom properties for you above.)
+    ### (HINT: Notice that orangeCircle.speedY on line 7 is negative!)
+    ### Place Your Code Here ###
+    orangeCircle.centerY=orangeCircle.centerY + orangeCircle.speedY
+    greenCircle.centerX=greenCircle.centerX + greenCircle.speedX
+    pass
