@@ -1,0 +1,27 @@
+app.background = gradient('navy', 'dodgerBlue', 'navy', start='top')
+
+
+# Put the rest of the shapes below in the shield Group.
+### (HINT: To be in the group, the shapes need to be within the Group's
+#          parentheses, with commas separating all of the shapes.)
+### Fix Your Code Here ###
+shield = Group(
+    Circle(200, 200, 150, fill=gradient('darkRed', 'red', 'darkRed', start='left')),
+    Circle(200, 200, 120, fill=gradient('grey', 'white', 'grey', start='left')),
+    
+Circle(200, 200, 90, fill=gradient('darkRed', 'red', 'darkRed', start='left')),
+Circle(200, 200, 60, fill=gradient('blue', 'steelBlue', 'blue', start='left')),
+Star(200, 200, 60, 5, fill=gradient('grey', 'white', 'grey', start='left')),
+)
+
+def onMouseMove(mouseX, mouseY):
+    # This moves the shield to the mouse.
+    shield.centerX = mouseX
+    shield.centerY = mouseY
+
+def onStep():
+    # Rotate the shield by increasing the shield's rotateAngle property by 5.
+    ### (HINT: You can rotate a Group like you rotate a shape!)
+    ### Place Your Code Here ###
+    shield.rotateAngle = shield.rotateAngle + 5
+    pass
