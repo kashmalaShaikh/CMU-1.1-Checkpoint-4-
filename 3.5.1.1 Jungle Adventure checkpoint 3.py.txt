@@ -1,0 +1,66 @@
+app.background = gradient('seaGreen', 'darkGreen', start='bottom')
+
+vine = Line(200, 0, 200, 250, fill='paleGreen', lineWidth=6)
+vine.swingSpeed = 3
+
+Star(50, 20, 120, 13, fill='mediumSeaGreen', roundness=80)
+Star(155, 50, 80, 13, fill='darkSeaGreen', roundness=85)
+Star(320, 30, 100, 13, fill='darkSeaGreen', roundness=85)
+Star(220, 0, 140, 17, fill='mediumSeaGreen', roundness=92)
+
+explorer = Circle(50, 200, 20, fill='tan')
+explorer.speedX = 0
+explorer.speedY = 0
+explorer.isJumping = False
+
+leftGround = Rect(0, 220, 80, 180,
+                  fill=gradient('oliveDrab', 'sienna', start='right-top'))
+rightGround = Rect(320, 245, 80, 155,
+                   fill=gradient('oliveDrab', 'sienna', start='left-top'))
+
+Rect(80, 380, 240, 20, fill='darkBlue')
+
+def onKeyPress(key):
+    # This starts the explorer jumping.
+    explorer.speedX = 6
+    explorer.speedY = -4
+    explorer.isJumping = True
+
+    # This hides the vine if the explorer jumps off of it.
+    if (key == 'enter'):
+        vine.centerX = -200
+
+def onStep():
+    # This swings the vine.
+    vine.rotateAngle = vine.rotateAngle + vine.swingSpeed
+    if (vine.rotateAngle < -45):
+        vine.swingSpeed = 3
+    if (vine.rotateAngle > 45):
+        vine.swingSpeed = -3
+
+    # This moves the explorer.
+    if (explorer.hitsShape(vine) == True):
+        explorer.centerX = vine.x2
+        explorer.centerY = vine.y2
+    else:
+        explorer.centerX = explorer.centerX + explorer.speedX
+        explorer.centerY = explorer.centerY + explorer.speedY
+
+    # Whenever the explorer touches either the left or right ground, stop the
+    # explorer's jump.
+    ### (HINT: The explorer has a custom property that says whether it is
+    #          jumping or not. You'll need to change it here!)
+    ### Place Your Code Here ###
+    if(explorer.hitsShape(leftGround) ==True):
+        explorer.isJumping = False 
+        explorer.speedX = 0 
+        explorer.speedY = 0 
+    if(explorer.hitsShape(rightGround) ==True):
+        explorer.isJumping = False 
+        explorer.speedX = 0 
+        explorer.speedY = 0 
+
+    # When the explorer is jumping, increase its y speed by 1.
+    ### Place Your Code Here ###
+    if (explorer.isJumping == True):
+        explorer.speedY += 1
