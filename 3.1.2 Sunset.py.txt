@@ -1,0 +1,13 @@
+app.background = gradient('navy', 'pink', start='top')
+sun = Circle(200, 100, 40, fill=gradient('gold', 'pink', start='top'))
+
+Rect(0, 200, 400, 200, fill='darkGreen')
+
+def onMouseMove(mouseX, mouseY):
+    # As long as the mouse is in the top half of the canvas, have the sun follow
+    # it.
+    ### Place Your Code Here ###
+    if (mouseY < 200):
+        sun.centerX = mouseX
+        sun.centerY = mouseY
+    pass
