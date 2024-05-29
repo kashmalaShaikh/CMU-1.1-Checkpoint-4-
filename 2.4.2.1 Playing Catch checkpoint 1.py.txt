@@ -1,0 +1,14 @@
+app.background = 'skyBlue'
+
+gloveThumb = Oval(260, 375, 75, 120, fill='brown', border='black', rotateAngle=25)
+glove = Oval(200, 375, 130, 150, fill='brown', border='black')
+
+# Move the glove and its thumb around to follow the mouse. Notice that the solution
+# only moves the glove's x position, not its y position.
+### (HINT: To position the glove's thumb, look at how far away from the glove
+#          we drew the thumb!)
+### Place Your Code Here ###
+
+def onMouseMove(mouseX, mouseY):
+    gloveThumb.centerX = mouseX + 60
+    glove.centerX= mouseX 
