@@ -1,0 +1,14 @@
+app.background = 'grey'
+
+spinningCircle = Circle(200, 200, 200,
+                        fill=gradient('crimson', 'lavender', start='top'))
+
+def onStep():
+    # Rotate the spinning circle by 3 degrees every time onStep is run.
+    ### Place Your Code Here ###
+    
+    spinningCircle.rotateAngle = spinningCircle.rotateAngle + 3
+    
+    
+    
+    pass
