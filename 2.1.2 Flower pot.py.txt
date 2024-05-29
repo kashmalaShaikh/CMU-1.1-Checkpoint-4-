@@ -1,0 +1,15 @@
+app.background = gradient('ghostWhite', 'powderBlue')
+
+# This draws the vase.
+Oval(200, 300, 50, 10, fill='limeGreen')
+Oval(200, 370, 100, 135, fill=gradient('dimGrey', 'lightGrey', start='bottom'))
+Rect(175, 300, 50, 10, fill='silver')
+
+def onMousePress(mouseX, mouseY):
+    # Draw a flower where you click the mouse and connect its stem to the vase!
+    ### (HINT: Remember to use ctrl to see the inspector!)
+    ### Place Your Code Here ###
+    Line(mouseX, mouseY, 200, 300, lineWidth=5, fill='limeGreen')
+    Star(mouseX, mouseY, 20, 11, fill=gradient('yellow', 'deepPink'))
+    
+    pass
