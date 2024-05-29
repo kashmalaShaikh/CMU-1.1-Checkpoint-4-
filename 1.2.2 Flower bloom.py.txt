@@ -1,0 +1,20 @@
+# Change the background to use a gradient.
+### (HINT: The inspector shows you the background info if you hover your mouse
+#          over one of the canvas corners.)
+### Fix Your Code Here ###
+app.background = gradient('lightCyan', 'dodgerBlue', 'navy', start='bottom')
+
+# Draws the clouds and the sun.
+Circle(200, 0, 100, fill=gradient('yellow', 'lightYellow'))
+Circle(80, 0, 80, fill=gradient('steelBlue', 'white', start='left'))
+Circle(320, 0, 80, fill=gradient('steelBlue', 'white', start='right'))
+
+# Draws the bush.
+Circle(200, 360, 75, fill=gradient('green', 'darkGreen', start='top'))
+Circle(150, 380, 65, fill=gradient('limeGreen', 'green', start='top'))
+Circle(250, 380, 65, fill=gradient('limeGreen', 'green', start='top'))
+
+# Draw the flower.
+### Place Your Code Here ###
+Star(200, 285, 24, 9, fill=gradient('magenta', 'pink'))
+Circle(200, 285, 5, fill='gold')
