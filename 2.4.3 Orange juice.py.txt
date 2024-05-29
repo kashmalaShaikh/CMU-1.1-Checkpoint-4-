@@ -1,0 +1,81 @@
+app.background = gradient(rgb(190, 190, 170), rgb(30, 240, 255), start='bottom')
+
+# table
+Rect(0, 275, 400, 125, opacity=70,
+     fill=gradient(rgb(95, 65, 50), rgb(165, 135, 120), start='bottom'))
+
+# oranges in the background
+Oval(15, 270, 100, 80, border='darkOrange',
+     fill=gradient('orangeRed', 'darkOrange', 'darkOrange', start='left-bottom'))
+Star(15, 235, 7, 7, fill='sienna', roundness=40)
+
+Oval(105, 290, 120, 100, border='darkOrange',
+     fill=gradient('orangeRed', 'darkOrange', 'darkOrange', start='left-bottom'))
+Star(105, 250, 10, 7, fill='sienna', roundness=40)
+
+Oval(365, 270, 100, 80, border='darkOrange',
+     fill=gradient('orangeRed', 'darkOrange', 'darkOrange', start='left-bottom'))
+Star(365, 235, 7, 7, fill='sienna', roundness=40)
+
+Oval(305, 290, 120, 100, border='darkOrange',
+     fill=gradient('orangeRed', 'darkOrange', 'darkOrange', start='left-bottom'))
+Star(305, 250, 10, 7, fill='sienna', roundness=40)
+
+# coaster
+Oval(200, 340, 200, 50, fill=gradient('sienna', 'peru', 'peru', start='left'))
+Rect(100, 320, 200, 20, fill=gradient('sienna', 'peru', 'peru', start='left'))
+Oval(200, 320, 200, 50, fill=gradient('burlyWood', 'peru', start='top'))
+
+# glass cup's base
+Oval(200, 320, 120, 35, fill='dodgerBlue', opacity=30)
+
+# straw
+Line(250, 85, 158, 300, fill=gradient('gainsboro', 'white', start='bottom'),
+     lineWidth=10)
+Line(250, 85, 326, 62, fill='white', lineWidth=10)
+Circle(250, 85, 5, fill='white')
+
+# orange juice
+Oval(200, 320, 105, 22, fill='orange')
+Oval(200, 320, 120, 35, opacity=30,
+     fill=gradient('royalBlue', 'white', 'lightSkyBlue', 'lightSkyBlue',
+                   'white', 'royalBlue', start='left'))
+orangeJuice = Line(200, 320, 200, 100, fill='orange', lineWidth=105)
+orangeJuice.level = 100
+
+# glass cup
+Rect(140, 90, 120, 230, opacity=20,
+     fill=gradient('royalBlue', 'white', 'lightSkyBlue', 'lightSkyBlue',
+                   'white', 'royalBlue', start='left'))
+Rect(140, 90, 120, 230, opacity=10,
+     fill=gradient(rgb(190, 190, 170), 'white', start='bottom'))
+Circle(230, 300, 10, fill=None, border='seashell', opacity=80)
+Circle(225, 295, 7, fill=None, border='seashell', opacity=80)
+Circle(230, 280, 5, fill=None, border='seashell', opacity=80)
+Circle(200, 300, 5, fill=None, border='seashell', opacity=80)
+Circle(215, 310, 3, fill=None, border='seashell', opacity=80)
+Circle(240, 254, 3, fill=None, border='seashell', opacity=80)
+
+# orange in the foreground
+Circle(330, 330, 55,
+       fill=gradient('orangeRed', 'darkOrange', start='left'), border='orangeRed')
+Oval(315, 325, 120, 100, fill='orange', border='darkOrange', borderWidth=6,
+     rotateAngle=-60)
+Star(315, 325, 50, 10, fill='seashell', roundness=10, opacity=80)
+
+
+def onMousePress(mouseX, mouseY):
+    # Change the value of orangeJuice.level based on the mouseY value.
+    ### (HINT: Add (mouseY / 2) so that the level is always between
+    #          100 and 300.)
+    ### Fix Your Code Here ###
+    orangeJuice.level = 100 + (mouseY/2)
+
+def onStep():
+    # Increase the orangeJuice.y2 value by one-tenth of the distance to
+    # orangeJuice.level
+    ### (HINT: Use orangeJuice.level - orangeJuice.y2 to get the distance,
+    #          then divide by 10 to take one-tenth of that distance.)
+    ### Place Your Code Here ###
+    orangeJuice.y2 = orangeJuice.y2+((orangeJuice.level-orangeJuice.y2)/10)
+    pass
