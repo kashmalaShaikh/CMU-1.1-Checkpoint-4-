@@ -1,0 +1,55 @@
+app.background = 'white'
+
+# This draws the outer circles.
+Circle(200, 200, 150)
+Circle(200, 200, 140, fill='white')
+
+# This draws the bottom layer.
+bottom1 = Star(200, 200, 160, 8)
+Circle(200, 200, 110)
+bottom2 = Star(200, 200, 160, 8, fill='white', roundness=30)
+Circle(200, 200, 100, fill='white')
+
+# This draws the middle layer.
+middle1 = Star(200, 200, 120, 8, rotateAngle=22)
+Circle(200, 200, 70)
+middle2 = Star(200, 200, 120, 8, fill='white', roundness=30, rotateAngle=22)
+Circle(200, 200, 60, fill='white')
+
+# This draws the top layer.
+top1 = Star(200, 200, 80, 8)
+Circle(200, 200, 40)
+top2 = Star(200, 200, 80, 8, fill='white', roundness=30)
+
+# This sets the rotateSpeed for the layers to determine how fast the layers spin.
+bottom1.rotateSpeed = 0
+middle1.rotateSpeed = 0
+top1.rotateSpeed = 0
+
+def onMouseMove(mouseX, mouseY):
+    # Set the bottom layer's rotateSpeed based on the mouse's x-position. It
+    # should be a number between 0 and 4.
+    ### (HINT: A mouseX of 200 should be a speed of 2. A mouseX of 400 should
+    #          be a speed of 4. Could division be helpful here?)
+    ### Place Your Code Here ###
+    bottom1.rotateSpeed = mouseX/100 
+    # Set the middle and top layer's rotateSpeed as well. The middle layer
+    # should rotate twice as fast as the bottom layer and the top layer should
+    # rotate twice as fast as the middle layer.
+    ### Place Your Code Here ###
+    middle1.rotateSpeed = mouseX/50
+    top1.rotateSpeed = mouseX/25
+    pass
+
+def onStep():
+    # On each step, rotate both stars in every layer. Each layer should rotate
+    # at the speed that the layer's custom property indicates.
+    ### (HINT: Each layer has two shapes that need to rotate at the same speed!)
+    ### Place Your Code Here ###
+    bottom1.rotateAngle += bottom1.rotateSpeed
+    bottom2.rotateAngle += bottom1.rotateSpeed 
+    middle1.rotateAngle += middle1.rotateSpeed
+    middle2.rotateAngle += middle1.rotateSpeed
+    top1.rotateAngle += top1.rotateSpeed
+    top2.rotateAngle += top1.rotateSpeed
+    pass
