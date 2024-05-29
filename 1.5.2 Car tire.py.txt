@@ -1,0 +1,12 @@
+app.background = 'deepSkyBlue'
+
+# Draw the tire!
+### (HINT: The Inspector displays information in the order of shapes that
+#          are drawn. If the first color the inspector shows is 'black', then
+#          the first shape has a fill of 'black'!)
+### Place Your Code Here ###
+Circle(200,200, 250, fill=gradient('black','darkSlateGrey','black', start='bottom'))
+Circle(200, 200, 175,  fill=gradient('dimGrey','white', start='left'))
+Circle(200,200, 130, fill='black')
+Star(200,200, 145, 10, roundness=70, fill='dimGrey')
+Star(200,200, 175, 10, roundness=40,fill=gradient('dimGrey','white', start='left'))
