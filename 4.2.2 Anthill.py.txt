@@ -1,0 +1,70 @@
+Rect(0, 0, 400, 325, fill=gradient('powderBlue', 'honeydew', start='top'))
+Rect(0, 325, 400, 75, fill=rgb(60, 117, 54))
+
+anthill = Group(
+    Circle(300, 395, 70, fill='sienna'),
+    Oval(300, 395, 175, 20, fill='sienna')
+    )
+antHillTop = Oval(300, 330, 45, 15)
+
+ant1 = Group(
+    Circle(0, 355, 5), Circle(10, 355, 5), Circle(20, 355, 5),
+    Label('V', 20, 350, bold=True),
+    Label('H', 5, 358, size=18)
+    )
+ant2 = Group(
+    Circle(80, 360, 5), Circle(90, 360, 5), Circle(100, 360, 5),
+    Label('V', 100, 355, bold=True),
+    Label('H', 85, 363, size=18)
+    )
+ant3 = Group(
+    Circle(160, 380, 5), Circle(170, 380, 5), Circle(180, 380, 5),
+    Label('V', 180, 375, bold=True),
+    Label('H', 165, 383, size=18)
+    )
+
+ants = Group(ant1, ant2, ant3)
+
+# This creates these custom properties for all the ants.
+for ant in ants:
+    ant.originalCenterY = ant.centerY
+    ant.speedX = 2
+    ant.speedY = 0
+
+def onStep():
+    # Move every ant using its speedX and speedY properties.
+    ### Place Your Code Here ###
+    ant1.centerX += ant.speedX
+    ant2.centerX+= ant.speedX
+    ant3.centerX += ant.speedX
+    # When an ant hits the anthill, it should start moving up by -1 every
+    # onStep run. It should also rotate -30 degrees.
+    ### Place Your Code Here ###
+    if(ant1.hitsShape(anthill)==True):
+        ant1.rotateAngle = -30
+        ant1.centerY += -1
+    if(ant2.hitsShape(anthill)==True):
+        ant2.rotateAngle = -30
+        ant2.centerY += -1
+    if(ant2.hitsShape(anthill)==True):
+        ant2.rotateAngle = -30
+        ant2.centerY += -1
+
+    # This code resets an ant when it reaches the top of the anthill. Add it to
+    # your loop!
+    ### Fix Your Code Here ###
+    if (ant1.hitsShape(antHillTop) == True):
+        ant1.centerX = 0
+        ant1.speedY = 0
+        ant1.centerY = ant1.originalCenterY
+        ant1.rotateAngle = 0
+    if (ant2.hitsShape(antHillTop) == True):
+        ant2.centerX = 0
+        ant2.speedY = 0
+        ant2.centerY = ant2.originalCenterY
+        ant2.rotateAngle = 0
+    if (ant3.hitsShape(antHillTop) == True):
+        ant3.centerX = 0
+        ant3.speedY = 0
+        ant3.centerY = ant3.originalCenterY
+        ant3.rotateAngle = 0
