@@ -1,0 +1,17 @@
+# This draws the background.
+Rect(0, 0, 400, 100, fill='lime')
+Rect(0, 100, 100, 200, fill=gradient('dodgerBlue', 'lime', start='top'))
+Rect(300, 100, 100, 200, fill=gradient('dodgerBlue', 'lime', start='top'))
+Rect(0, 300, 400, 100, fill='dodgerBlue')
+
+rotatingSquare = Rect(100, 100, 200, 200,
+                      fill=gradient('dodgerBlue', 'lime', start='right'))
+
+def onMousePress(mouseX, mouseY):
+    # Rotate the rectangle named rotatingSquare by adding to its .rotateAngle
+    # property.
+    rotatingSquare.rotateAngle+= 15
+    ### (HINT: Use the Inspector, click the mouse, and see how much the
+    #          rotateAngle changed by!)
+    ### Place Your Code Here ###
+    pass
