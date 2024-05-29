@@ -1,0 +1,48 @@
+app.background = 'salmon'
+
+# thermometer
+Rect(50, 90, 100, 250, fill='gainsboro')
+Circle(100, 90, 50, fill='gainsboro')
+Circle(70, 340, 20, fill='gainsboro')
+Circle(130, 340, 20, fill='gainsboro')
+Rect(70, 340, 60, 20, fill='gainsboro')
+
+Circle(100, 320, 20, fill='white')
+Rect(90, 75, 20, 250, fill='white')
+Circle(100, 75, 10, fill='white')
+Circle(100, 320, 13, fill='salmon')
+
+# number labels and markings down the side
+Line(78, 300, 78, 80, fill='grey', lineWidth=12, dashes=True)
+Line(120, 300, 120, 80, fill='grey', lineWidth=4, dashes=True)
+Label('F', 120, 70)
+Label(20, 135, 290)
+Label(40, 135, 250)
+Label(60, 135, 210)
+Label(80, 135, 170)
+Label(100, 135, 130)
+Label(120, 135, 90)
+
+# display
+Label('° Fahrenheit', 275, 250, size=20)
+temperature = Label(120, 280, 180, size=60)
+
+meter = Line(100, 320, 100, 90, fill='salmon', lineWidth=5)
+
+# When the mouse is pressed, the thermometer's meter should move and the
+# temperature should change.
+# Also, the background color should change.
+### (HINT: To move the meter and find the temperature, try to create equations
+#          so that a mouseY between 0 and 400 gives the correct values.)
+### Place Your Code Here ###
+def onMousePress(mouseX, mouseY):
+    meter.y2= 90 +(mouseY/2)
+    temperature.value = meter.y1 - 155 + (meter.y2 / -2)
+    if(mouseY<=99):
+        app.background = 'salmon'
+    else: 
+        if(mouseY<=250):
+            app.background = 'yellowGreen'
+        else:
+            if(mouseY <= 400):
+                app.background = 'royalBlue'
