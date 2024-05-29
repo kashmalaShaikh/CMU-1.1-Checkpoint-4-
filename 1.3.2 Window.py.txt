@@ -1,0 +1,17 @@
+app.background = 'tan'
+
+# Draw the window frame, the sky, and the grass.
+### (HINT: The grass doesn't cover any part of the sky.)
+### Place Your Code Here ###
+Rect(25,25, 350, 350, fill='sienna')
+Rect(35,35, 330, 285, fill='skyBlue')
+
+Rect(35, 320, 330, 45, fill='forestGreen')
+Rect(250, 240, 25, 100, fill='sienna')
+Circle(270, 160, 80, fill='darkGreen')
+Circle(220, 210, 70, fill='green')
+Circle(300, 200, 60, fill='forestGreen')
+
+# Draw the window glass.
+### Place Your Code Here ###
+Rect(35,35, 330, 330, opacity=60, fill=gradient('white', 'grey', 'white', start='top-left'))
