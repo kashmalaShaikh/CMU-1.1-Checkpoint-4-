@@ -1,0 +1,23 @@
+# This draws the sky, moon, and water.
+Rect(0, 0, 400, 250, fill='steelBlue')
+Circle(70, 220, 50, fill='lightYellow')
+Rect(0, 250, 400, 150, fill='slateBlue')
+
+# This draws the lighthouse base.
+Rect(180, 220, 40, 65, fill='snow')
+Rect(185, 160, 30, 60, fill='crimson')
+
+# Draw the rest of the lighthouse.
+### Place Your Code Here ###
+Rect(190, 125, 20, 25, fill='crimson')
+Rect(195, 130, 10, 20, fill='yellow')
+
+Rect(203, 190, 5, 10, fill='black')
+Rect(180, 150, 40, 10, fill='fireBrick')
+# This draws an island for the lighthouse to sit on.
+Circle(200, 315, 60, fill='indigo')
+Rect(140, 300, 120, 80, fill='slateBlue')
+
+# Draw the light from the lighthouse.
+### Place Your Code Here ###
+Circle(200, 140, 60, fill='yellow', opacity=20)
