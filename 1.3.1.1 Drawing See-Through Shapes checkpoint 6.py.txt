@@ -1,0 +1,11 @@
+app.background = 'wheat'
+
+# Draw two eyes and a mouth to create a serious face.
+### (HINT: You will need to figure out the width and height using the method
+#          from the notes!)
+### Place Your Code Here ###
+Rect(100, 120, 30, 80, fill= 'black')
+Rect(270, 120, 30, 80, fill= 'black')
+Rect(150, 300, 100, 10, fill= 'black')
+# This draws the chin.
+Rect(180, 320, 40, 20)
