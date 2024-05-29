@@ -1,0 +1,50 @@
+app.background = gradient('seaGreen', 'darkGreen', start='bottom')
+
+vine = Line(200, 0, 200, 250, fill='paleGreen', lineWidth=6)
+vine.swingSpeed = 3
+
+Star(50, 20, 120, 13, fill='mediumSeaGreen', roundness=80)
+Star(155, 50, 80, 13, fill='darkSeaGreen', roundness=85)
+Star(320, 30, 100, 13, fill='darkSeaGreen', roundness=85)
+Star(220, 0, 140, 17, fill='mediumSeaGreen', roundness=92)
+
+explorer = Circle(50, 200, 20, fill='tan')
+explorer.speedX = 3
+explorer.speedY = 0
+explorer.isJumping = False
+
+leftGround = Rect(0, 220, 80, 180,
+                  fill=gradient('oliveDrab', 'sienna', start='right-top'))
+rightGround = Rect(320, 245, 80, 155,
+                   fill=gradient('oliveDrab', 'sienna', start='left-top'))
+
+Rect(80, 380, 240, 20, fill='darkBlue')
+
+def onKeyPress(key):
+    # When the enter key is pressed, hide the vine by moving it off the canvas.
+    # This way the explorer is no longer holding onto it.
+    ### (HINT: You can move it off the canvas by setting its centerX or
+    #          centerY to very big or very small numbers.)
+    ### Place Your Code Here ###
+    vine.centerX = 700 
+    vine.centerY = 700 
+    
+    pass
+
+def onStep():
+    # This swings the vine.
+    vine.rotateAngle = vine.rotateAngle + vine.swingSpeed
+    if (vine.rotateAngle < -45):
+        vine.swingSpeed = 3
+    if (vine.rotateAngle > 45):
+        vine.swingSpeed = -3
+
+    # When the explorer is touching the vine, make them swing on the end of it.
+    # Otherwise, move the explorer using its speed custom properties.
+    ### Place Your Code Here ###
+    if(explorer.hitsShape(vine) == True):
+       explorer.centerX=vine.x2
+       explorer.centerY=vine.y2 
+    else:
+        explorer.centerX = explorer.centerX+ explorer.speedX
+        explorer.centerY = explorer.centerY+ explorer.speedY
