@@ -1,0 +1,6 @@
+app.background = 'black'
+
+def onMouseMove(mouseX, mouseY):
+    # Change the oval's width and height to be 25 more than mouseX and mouseY.
+    ### Fix Your Code Here ###    Oval(200, 200, mouseX + 25, mouseY + 25, fill=None, border='orangeRed', borderWidth=1,
+         opacity=20)
