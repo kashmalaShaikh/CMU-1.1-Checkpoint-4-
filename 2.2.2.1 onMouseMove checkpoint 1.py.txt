@@ -1,0 +1,13 @@
+app.background = 'aliceBlue'
+
+Line(200, 200, 200, 400, fill=gradient('cyan', 'darkBlue'), lineWidth=20)
+
+spinningStar = Star(200, 200, 150, 3, fill=gradient('pink', 'orangeRed'))
+
+def onMouseMove(mouseX, mouseY):
+    # Rotate the star using either the mouseX or the mouseY. We have named the
+    # star "spinningStar" for you.
+    ### (HINT: Remember that all shapes have a rotateAngle property!)
+    ### Place Your Code Here ###
+    spinningStar.rotateAngle= mouseX
+    pass
