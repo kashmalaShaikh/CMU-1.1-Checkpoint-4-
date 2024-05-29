@@ -1,0 +1,29 @@
+app.background = 'black'
+
+# h key
+Rect(40, 110, 160, 160, fill=gradient('silver', 'white', start='left-top'))
+Rect(63, 130, 115, 115, fill=rgb(235, 235, 235))
+
+# i key
+Rect(200, 110, 160, 160, fill=gradient('silver', 'white', start='left-top'))
+Rect(223, 130, 115, 115, fill=rgb(235, 235, 235))
+
+hLabel = Label('h', 120, 190, size=50, font='monospace', bold=True)
+iLabel = Label('i', 280, 190, size=50, font='monospace', bold=True)
+
+def onKeyPress(key):
+    # Change the color of the letter labels when that key is pressed.
+    ### (HINT: Don't forget to change the other letter's fill back to black!)
+    ### Place Your Code Here ###
+  if(key == 'h'):
+    hLabel.fill = "red"
+    iLabel.fill = "black"
+  if(key == 'i'):
+    iLabel.fill = "red"
+    hLabel.fill = "black"
+
+    
+    
+    
+    
+  
