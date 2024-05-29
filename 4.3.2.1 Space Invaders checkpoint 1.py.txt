@@ -1,0 +1,31 @@
+app.background = 'black'
+
+player = Group(
+    Star(200, 375, 20, 3, fill=gradient('grey', 'skyBlue', 'grey', start='left'),
+         roundness=85),
+    Oval(200, 400, 50, 40),
+    Line(188, 385, 190, 370),
+    Line(212, 385, 210, 370),
+    Star(200, 370, 8, 5, fill='cyan', border='dimGrey', borderWidth=0.5),
+    Line(195, 382, 195, 390, fill=gradient('orange', 'black', start='top'),
+         lineWidth=4),
+    Line(205, 382, 205, 390, fill=gradient('orange', 'black', start='top'),
+         lineWidth=4),
+    )
+player.speedX = 0
+
+def onKeyPress(key):
+    # Set the player's speed to be either 10 or -10 if the left or right arrow
+    # key is pressed.
+    ### Place Your Code Here ###
+    if(key == 'right'):
+        player.speedX = 10 
+    if(key == 'left'):
+        player.speedX = -10
+    pass
+
+def onStep():
+    # Move the player left and right using its speed.
+    ### Place Your Code Here ###
+    player.centerX = player.centerX + player.speedX 
+    pass

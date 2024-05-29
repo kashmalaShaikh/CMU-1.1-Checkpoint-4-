@@ -1,0 +1,70 @@
+app.background = 'black'
+
+player = Group(
+    Star(200, 375, 20, 3, fill=gradient('grey', 'skyBlue', 'grey', start='left'),
+         roundness=85),
+    Oval(200, 400, 50, 40),
+    Line(188, 385, 190, 370),
+    Line(212, 385, 210, 370),
+    Star(200, 370, 8, 5, fill='cyan', border='dimGrey', borderWidth=0.5),
+    Line(195, 382, 195, 390, fill=gradient('orange', 'black', start='top'),
+         lineWidth=4),
+    Line(205, 382, 205, 390, fill=gradient('orange', 'black', start='top'),
+         lineWidth=4),
+    )
+player.speedX = 0
+
+invaders = Group(
+    Circle(100, 100, 12, fill='red'),
+    Circle(150, 100, 12, fill='red'),
+    Circle(200, 100, 12, fill='red'),
+    Circle(250, 100, 12, fill='red'),
+    Circle(300, 100, 12, fill='red'),
+    Circle(100, 140, 12, fill='orange'),
+    Circle(150, 140, 12, fill='orange'),
+    Circle(200, 140, 12, fill='orange'),
+    Circle(250, 140, 12, fill='orange'),
+    Circle(300, 140, 12, fill='orange'),
+    Circle(100, 180, 12, fill='yellow'),
+    Circle(150, 180, 12, fill='yellow'),
+    Circle(200, 180, 12, fill='yellow'),
+    Circle(250, 180, 12, fill='yellow'),
+    Circle(300, 180, 12, fill='yellow'),
+    )
+invaders.speedX = 5
+invaders.speedY = 20
+
+gameOverLabel = Label('Game Over', 200, 200, fill='white', size=40, bold=True,
+                      opacity=0)
+
+def onKeyPress(key):
+    # This sets the player's speed.
+    if (key == 'left'):
+        player.speedX = -10
+    if (key == 'right'):
+        player.speedX = 10
+
+def onStep():
+    # This moves the player.
+    player.centerX = player.centerX + player.speedX
+
+    # Move the invaders left or right, depending on their speed. If the invaders
+    # reach the edge of the canvas, switch directions and move them down.
+    ### (HINT: They reach the edge of the canvas if the their center is
+    #          more than 400 or less than 0.)
+    ### Place Your Code Here ###
+    invaders.centerX += invaders.speedX
+    if (invaders.centerX > 400):
+        invaders.speedX = -5
+        invaders.centerY += invaders.speedY
+    if (invaders.centerX < 0):
+        invaders.speedX = 5
+        invaders.centerY += invaders.speedY
+        
+    # Display the gameOverLabel if we have lost the game by being hit by the
+    # invaders.
+    ### Place Your Code Here ###
+    if(player.hitsShape(invaders)== True):
+        gameOverLabel.opacity = 100
+    
+  
