@@ -1,0 +1,27 @@
+app.background = 'black'
+
+# Draw the perfume in the bottle.
+### Place Your Code Here ###
+
+# This draws the straw and spray nozzle.
+
+
+
+
+# Draw the bottle glass.
+### Place Your Code Here ###
+Oval(165, 290, 240, 220, fill='plum')
+Rect(155, 130, 20, 60, fill='silver')
+Star(165, 280, 130, 29, roundness=97, opacity=50, fill=gradient('white', 'silver', 'white', start='left'))
+Circle(105, 105, 55, fill='pink')
+Circle(165, 115, 20, fill='grey')
+Circle(180, 115, 3, fill='silver')
+
+# This draws the bottle outline.
+
+Star(165, 280, 130, 29, fill=None, border='white', borderWidth=15, roundness=97)
+
+# Draw the perfume spray.
+### Place Your Code Here ###
+
+Star(275, 115, 100, 2000, roundness=20, fill='plum')
