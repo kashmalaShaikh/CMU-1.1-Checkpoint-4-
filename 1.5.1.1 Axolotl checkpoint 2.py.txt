@@ -1,0 +1,34 @@
+app.background = 'beige'
+
+# This draws the tank decor.
+Star(360, 370, 120, 25, fill='mediumSeaGreen', roundness=35)
+Star(80, 360, 70, 20, fill='seaGreen', roundness=40)
+Star(125, 365, 35, 15, fill='mediumSeaGreen', roundness=90)
+Star(185, 350, 10, 5, fill='grey', roundness=80)
+Circle(310, 348, 15, fill='dimGrey')
+Rect(0, 350, 400, 50, fill='saddleBrown')
+
+# Draw the axolotl's tail.
+### Place Your Code Here ###
+Oval(255,190,100,40, fill='pink')
+Rect(205, 170, 100, 20, fill='beige')
+# Draw the axolotl's body and legs.
+### Place Your Code Here ###
+Oval(170,220,15,35, fill='paleVioletRed', rotateAngle=60)
+Oval(230,220,15,35, fill='paleVioletRed', rotateAngle=300)
+Oval(180,220,20,40, fill='pink', rotateAngle=60)
+Oval(240,215,20,40, fill='pink', rotateAngle=300)
+Oval(200,200,120,50, fill='pink')
+
+# We have drawn the axolotl's head and half of the whiskers for you. Draw the
+# rest of the whiskers.
+### Place Your Code Here ###
+Line(105, 200, 120, 200, fill='hotPink')
+Line(107, 210, 120, 205, fill='hotPink')
+Line(107, 190, 120, 195, fill='hotPink')
+Oval(150, 200, 60, 50, fill='pink')
+Circle(125, 200, 3)
+Circle(155, 200, 3)
+Line(170,195,188, 190,fill='hotPink',lineWidth=2)
+Line(170,200,190, 200,fill='hotPink')
+Line(170,205,188, 210,fill='hotPink',lineWidth=2)
