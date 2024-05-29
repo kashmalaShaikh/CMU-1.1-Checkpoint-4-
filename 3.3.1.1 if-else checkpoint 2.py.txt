@@ -1,0 +1,29 @@
+app.stepsPerSecond = 4
+
+# This draws the stick person's head, body, and legs.
+Circle(200, 150, 50)
+Line(200, 150, 200, 350, lineWidth=25)
+Line(200, 350, 175, 410, lineWidth=20)
+Line(200, 350, 225, 410, lineWidth=20)
+
+# This draws the right arm.
+Line(200, 210, 260, 260, lineWidth=15)
+Line(260, 260, 280, 330, lineWidth=15)
+
+# This draws the left arm.
+Line(200, 210, 125, 200, lineWidth=15)
+arm = Line(125, 200, 115, 110, lineWidth=15)
+arm.x2 = 115
+
+def onStep():
+    # When the arm is in its original position, move one endpoint so that it
+    # waves. Otherwise, move it back to the original position.
+    ### (HINT: Remember that Lines have the properties .x2 and .y2!)
+    ### Place Your Code Here ###
+    if(arm.x2 == 115):
+      arm.x2 = 75
+      arm.y2 = 120 
+    else:
+        arm.x2 = 115
+        arm.y2 = 110
+        
