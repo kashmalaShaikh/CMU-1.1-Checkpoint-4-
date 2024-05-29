@@ -1,0 +1,7 @@
+app.background = 'black'
+
+def onMousePress(mouseX, mouseY):
+    # Draw a star using the mouseX as the rotateAngle.
+    ### Place Your Code Here ###
+    Star(200, 200, 200, 5, fill='white', opacity=20, rotateAngle= mouseX)
+    pass
