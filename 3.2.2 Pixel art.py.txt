@@ -1,0 +1,19 @@
+app.background = 'ghostWhite'
+
+cursor = Rect(20, 20, 20, 20, fill='red', border='black')
+
+def onKeyPress(key):
+    # This moves the cursor.
+    if (key == 'left'):
+        cursor.centerX = cursor.centerX - 20
+    if (key == 'right'):
+        cursor.centerX = cursor.centerX + 20
+    if (key == 'up'):
+        cursor.centerY = cursor.centerY - 20
+    if (key == 'down'):
+        cursor.centerY = cursor.centerY + 20
+
+    # Only draw this rectangle if the space key is pressed.
+    ### Fix Your Code Here ###
+    if (key == 'space'):
+       Rect(cursor.centerX - 10, cursor.centerY - 10, 20, 20, fill='crimson')
