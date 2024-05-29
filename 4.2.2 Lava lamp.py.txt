@@ -1,0 +1,51 @@
+app.background = gradient('yellow', 'crimson', start='top')
+app.stepsPerSecond = 20
+
+# window
+Line(200, 0, 200, 400, lineWidth=4)
+Line(0, 200, 400, 200, lineWidth=4)
+Rect(0, 0, 400, 400, fill=None, border='black', borderWidth=10)
+
+blob1 = Circle(160, 200, 5, fill='red', opacity=90)
+blob1.speedY = 6
+
+blob2 = Circle(170, 200, 10, fill='red', opacity=90)
+blob2.speedY = 5
+
+blob3 = Circle(180, 200, 15, fill='red', opacity=90)
+blob3.speedY = 4
+
+blob4 = Circle(190, 200, 20, fill='red', opacity=90)
+blob4.speedY = 3
+
+blob5 = Circle(210, 200, 25, fill='red', opacity=90)
+blob5.speedY = 2
+
+blob6 = Circle(220, 200, 30, fill='red', opacity=90)
+blob6.speedY = 1
+
+blobs = Group(blob1, blob2, blob3, blob4, blob5, blob6)
+
+# lamp
+Oval(200, 200, 130, 300, fill=gradient('yellow', 'red'), opacity=65)
+Oval(200, 200, 130, 300, fill=None, border='black')
+Rect(150, 50, 100, 50, border='black',
+     fill=gradient('orange', 'fireBrick', start='left'))
+Rect(150, 300, 100, 50, border='black',
+     fill=gradient('orange', 'fireBrick', start='left'))
+
+def onStep():
+    # Move each blob using its speed. It should change directions when its
+    # top or bottom are above 100 or below 300.
+    ### (HINT: Each blob has its own name and is in the blobs group.)
+    ### (HINT: The top and bottom can be found by adding/subtracting the blob's
+    #          radius to its center!)
+    ### Place Your Code Here ###
+    for blob in blobs:
+        blob.centerY =  blob.centerY +  blob.speedY
+        blob.centerY +  blob.speedY
+        if(blob.centerY + blob.radius > 300):
+           blob.speedY *= -1 
+        if(blob.centerY - blob.radius < 100):
+           blob.speedY *= -1 
+    pass
