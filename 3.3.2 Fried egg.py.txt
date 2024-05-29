@@ -1,0 +1,23 @@
+app.background = 'lightSalmon'
+
+# pan
+Line(105, 305, 0, 400, fill='dimGray', lineWidth=40)
+Circle(200, 200, 145, border='dimGray', borderWidth=5)
+Circle(200, 200, 125, fill=None, border='gray', borderWidth=5)
+
+# egg
+eggWhite = Oval(220, 220, 100, 120, fill='white', rotateAngle=40)
+eggYolk = Circle(210, 220, 20, fill='gold', opacity=30)
+
+msg = Label('Breakfast is ready!', 200, 30, fill='white', size=20, bold=True,
+            opacity=0)
+
+def onMousePress(mouseX, mouseY):
+    # As long as we don't cause an error, increase the opacity of the egg yolk
+    # by 10. If we can't increase the opacity any more, display the message.
+    ### Place Your Code Here ###
+    if (eggYolk.opacity < 100):
+        eggYolk.opacity += 10
+    else: 
+        msg.opacity = 100
+    pass
