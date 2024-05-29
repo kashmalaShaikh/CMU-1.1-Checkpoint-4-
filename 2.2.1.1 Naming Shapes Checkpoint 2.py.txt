@@ -1,0 +1,13 @@
+Rect(0, 0, 400, 200, fill='lightGrey')
+Rect(0, 200, 400, 200, fill='thistle')
+
+# Name this rectangle tabby.
+### Place Your Code Here ###
+tabby = Rect(200, 200, 50, 50, fill='darkOrange')
+
+def onMousePress(mouseX, mouseY):
+    # Move tabby to the x position of the mouse.
+    ### Place Your Code Here ###
+    tabby.centerX = mouseX
+    # This moves tabby 200 above where the mouse was pressed.
+    tabby.centerY = mouseY - 200
