@@ -1,0 +1,24 @@
+app.background = gradient('white', 'lightSalmon')
+app.stepsPerSecond = 5
+
+Label('Click when the counter gets to 15!', 200, 20, fill='darkSlateGrey',
+      size=20, bold=True)
+
+counter = Label(0, 200, 200, fill='darkSlateGrey', size=75, bold=True)
+
+def onMousePress(mouseX, mouseY):
+    # If the counter label displays 15, then change it to say 'You Win'.
+    # Otherwise, change the message to 'You Lose'.
+    ### (HINT: Remember that we can check if two values are equal by using
+    #          ==.)
+    ### Place Your Code Here ###
+    if (counter.value == 15):
+        counter.value = 'You Win'
+    else:
+        counter.value = 'You Lose'
+    
+    # This stops the program.
+    app.paused = True
+
+def onStep():
+    counter.value += 1
