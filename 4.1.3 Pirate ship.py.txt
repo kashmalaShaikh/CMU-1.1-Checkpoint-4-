@@ -1,0 +1,30 @@
+app.background = gradient('lightBlue', 'lightSkyBlue', start='top')
+
+# sea
+Rect(0, 200, 400, 200,
+     fill=gradient('paleTurquoise', 'mediumTurquoise', 'darkTurquoise', start='top'))
+
+# ship
+Oval(200, 400, 450, 350, fill='sienna', border='peru')
+Rect(190, 160, 20, 100, fill='sienna')
+Rect(115, 245, 175, 200, fill='chocolate')
+
+pirateWheel = Group(
+    Circle(200, 250, 100, fill=None, border='orange', borderWidth=20),
+    Line(200, 370, 200, 130, fill='orange', lineWidth=10),
+    Line(120, 330, 280, 170, fill='orange', lineWidth=10),
+    Line(80, 250, 320, 250, fill='orange', lineWidth=10),
+    Line(280, 330, 120, 170, fill='orange', lineWidth=10),
+    Circle(200, 250, 20, fill='darkOrange')
+    )
+
+def onMouseMove(mouseX, mouseY):
+    # If the mouse is on the left side of the canvas, rotate the wheel 1 degree
+    # counterclockwise. Otherwise, rotate it 1 degree clockwise.
+    ### Place Your Code Here ###
+    pirateWheel.rotateSpeed = 1
+    if(mouseX< 200):
+        pirateWheel.rotateAngle = pirateWheel.rotateAngle - pirateWheel.rotateSpeed
+    if(mouseX > 200 ):
+        pirateWheel.rotateAngle = pirateWheel.rotateAngle + pirateWheel.rotateSpeed
+    pass
