@@ -1,0 +1,15 @@
+app.background = gradient('black', 'navy')
+
+def onMousePress(mouseX, mouseY):
+    # Draw the circle that the X is drawn on top of. It should be drawn where the
+    # mouse is pressed.
+    ### (HINT: Remember to press and hold the ctrl key to use the inspector!)
+    ### Place Your Code Here ###
+    Circle(mouseX, mouseY, 50, fill=gradient('lime','black'))
+    # Draw the 4-pointed star that makes the X shape. The inspector shows
+    # that it has a roundness and a rotateAngle set!
+    ### (HINT: You can ignore or delete the "pass" below. It prevents an error
+    #          that appears when you have no code indented inside onMousePress.)
+    ### Place Your Code Here ###
+    Star(mouseX, mouseY, 50, 4, roundness=20, rotateAngle=45,  fill=gradient('yellow', 'lime'))
+    pass
