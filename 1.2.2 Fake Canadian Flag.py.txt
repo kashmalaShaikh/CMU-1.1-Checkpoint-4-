@@ -1,0 +1,11 @@
+# These circles draw red borders on the sides.
+Circle(-200, 200, 275, fill='crimson')
+Circle(600, 200, 275, fill='crimson')
+
+# Draw the Maple Leaf. Careful use of the inspector will be needed!
+### (HINT: The leaf is drawn using 4 shapes.)
+### Place Your Code Here ###
+Star(200, 200, 90, 9, fill='crimson')
+Star(200, 200, 90, 8, fill='crimson')
+Circle(200, 350,100,  fill='white')
+Star(200, 250, 60, 4, fill='crimson', roundness=10)
