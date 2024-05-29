@@ -1,0 +1,16 @@
+app.background = 'navy'
+
+Line(200, 0, 200, 400, fill='white')
+
+def onMouseMove(mouseX, mouseY):
+    # If the mouse is left of the center, the circle should be crimson. If the
+    # mouse is right of the center, the circle should be dodgerBlue.
+    ### (HINT: If the mouse is exactly in the center of the canvas, draw
+    #          nothing.)
+    ### Fix Your Code Here ###
+    if(mouseX < 200):
+      Circle(mouseX, mouseY, 10, fill= 'crimson')
+    if(mouseX > 200):
+      Circle(mouseX, mouseY, 10, fill= 'dodgerBlue')
+      
+    
