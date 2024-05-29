@@ -1,0 +1,22 @@
+app.background = gradient('snow', 'lightCyan', 'skyBlue', start='top')
+
+ball = Circle(200, 200, 20, fill=gradient('red', 'maroon', start='top'))
+ball.speed = 0
+
+def onStep():
+    # This moves the ball.
+    ball.centerY += ball.speed
+
+    # If the ball's bottom is below the ground, make it bounce by changing its
+    # speed to -20. Otherwise, its speed should increase by 1.
+    ### (HINT: The ball's bottom is its center plus its radius! And "below
+    #          the ground" means bigger than 400.)
+    ### Place Your Code Here ###
+    if (ball.centerY > 380):
+        ball.speed = -20 
+    else: 
+        ball.speed += 1 
+    
+    
+    
+    
