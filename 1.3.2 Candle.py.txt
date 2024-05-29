@@ -1,0 +1,9 @@
+app.background = gradient('orange', 'black', 'black')
+
+# Draw the candle and its wick (the part that is on fire).
+### Place Your Code Here ###
+Rect(195, 264, 30, 35,fill=gradient('black', 'dimGray', 'black', start='left'))
+Rect(119, 285, 180, 120, fill=gradient('black', 'saddleBrown', 'orange', 'saddleBrown', 'black', start='left'))
+# This draws the flame and the shadow.
+Star(170, 225, 60, 200)
+Star(208, 225, 60, 200, fill=gradient('yellow', 'red'))
