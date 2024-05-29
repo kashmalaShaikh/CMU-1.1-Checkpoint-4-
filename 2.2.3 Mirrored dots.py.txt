@@ -1,0 +1,19 @@
+app.background = gradient('dodgerBlue', 'navy')
+
+Line(200, 400, 200, 0, dashes=True)
+
+dot1 = Circle(100, 100, 20, fill=gradient('lightCoral', 'crimson'))
+dot2 = Circle(300, 100, 20, fill=gradient('paleGreen', 'seaGreen'))
+
+def onMouseMove(mouseX, mouseY):
+    # Move dot1 to follow the mouse.
+    ### Place Your Code Here ###
+    dot1.centerX= mouseX
+    dot1.centerY= mouseY
+    # Move dot2 to be a mirrored version of dot1.
+    ### (HINT: The distance from dot2 to the right edge of the canvas is mouseX!)
+    ### Place Your Code Here ###
+    dot2.centerX= 400 - mouseX
+    dot2.centerY= mouseY
+    pass
+  
