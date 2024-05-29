@@ -1,0 +1,10 @@
+app.background = 'black'
+app.stepsPerSecond = 45
+sun = Star(200, 200, 175, 5, fill=gradient('orangeRed', 'gold'))
+
+def onStep():
+    # Increase the number of points that the sun has.
+    ### Place Your Code Here ###
+    sun.points += 2
+   
+    pass
