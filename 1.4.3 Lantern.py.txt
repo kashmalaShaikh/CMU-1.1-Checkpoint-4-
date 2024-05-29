@@ -1,0 +1,18 @@
+app.background = gradient('lightSalmon', 'midnightBlue')
+
+# Draw the lantern's center.
+### (HINT: Use 3 Ovals centered at (200, 200) with borders!)
+### Place Your Code Here ###
+
+# Draw the red strings that are below the lantern.
+### (HINT: You only need to draw a single Line!)
+### Place Your Code Here ###
+
+# This draws the rectangles at the top and bottom of the lantern.
+
+Oval(200,200, 180, 200, fill='red', border='darkred', borderWidth=8)
+Oval(200,200, 120, 200, fill='orange', border='darkred', borderWidth=8)
+Oval(200,200, 50, 200, fill='gold', border='darkred', borderWidth=8)
+Rect(130, 100, 140, 40, fill='orangeRed', border='darkRed', borderWidth=8)
+Rect(130, 260, 140, 40, fill='orangeRed', border='darkRed', borderWidth=8)
+Line(160, 350, 240, 350, dashes=True, fill='red', lineWidth=100)
