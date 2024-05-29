@@ -1,0 +1,7 @@
+# Change the ball to have a gradient!
+### (HINT: Remember that gradients use the format:
+#          fill=gradient(color1, color2))
+### Fix Your Code Here ###
+Circle(200, 200, 175, fill=gradient('cyan', 'dodgerBlue'))
+
+Star(200, 200, 150, 5, fill='crimson')
