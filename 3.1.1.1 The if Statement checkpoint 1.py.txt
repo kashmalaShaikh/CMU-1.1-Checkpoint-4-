@@ -1,0 +1,16 @@
+app.background = 'dodgerBlue'
+
+# This draws the grass.
+Rect(0, 300, 400, 100, fill=gradient('sienna', 'forestGreen', start='top'))
+
+def onMousePress(mouseX, mouseY):
+    # The splash should only be drawn if the mouse is clicked in the water.
+    ### (HINT: The mouse is clicked in the water if the mouseY is less than
+    #          the top of the grass.)
+    ### (HINT: You can check if mouseY is less than a number by using the <
+    #          symbol.)
+    ### Fix Your Code Here ###
+    if (mouseY < 300):
+      Circle(mouseX, mouseY, 60, fill='deepSkyBlue', opacity=50)
+      Circle(mouseX, mouseY, 40, fill='deepSkyBlue', opacity=70)
+      Circle(mouseX, mouseY, 20, fill='deepSkyBlue', opacity=90)
