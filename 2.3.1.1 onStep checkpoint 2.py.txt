@@ -1,0 +1,16 @@
+app.background = 'dodgerBlue'
+
+ball = Circle(200, 0, 40, fill=gradient('red', 'darkRed', start='left-top'))
+
+def onMousePress(mouseX, mouseY):
+    # This moves the ball to be at the top of the canvas, and have the same
+    # x-position as the mouse.
+    ball.centerX = mouseX
+    ball.centerY = 0
+
+# Change this to use onStep instead of onMouseMove.
+### Fix Your Code Here ###
+
+def onStep():
+  ball.centerY = ball.centerY + 10
+    # This moves the ball down by 10.
