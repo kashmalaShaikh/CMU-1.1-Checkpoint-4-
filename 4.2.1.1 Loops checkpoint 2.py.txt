@@ -1,0 +1,23 @@
+app.background = gradient('aquamarine', 'teal', start='top')
+
+bubblesGroup = Group(
+    Circle(100, 100, 60, fill=gradient('aquamarine', 'teal', start='top'))
+    )
+
+def onMousePress(mouseX, mouseY):
+    bubblesGroup.add(
+        Circle(mouseX, mouseY, 60,
+               fill=gradient('aquamarine', 'teal', start='top'))
+        )
+
+def onStep():
+    # Decrease the radius of each bubble in the bubblesGroup by 1. When a bubble's
+    # radius is less than 3, remove it from the group.
+    ### (HINT: Groups don't have a radius property, so you need to decrease
+    #          the radius property of each bubble 1-by-1.)
+    ### Place Your Code Here ###
+    for bubble in bubblesGroup:
+        bubble.radius = bubble.radius -1
+        if(bubble.radius < 3):
+           bubblesGroup.remove(bubble)
+    pass
