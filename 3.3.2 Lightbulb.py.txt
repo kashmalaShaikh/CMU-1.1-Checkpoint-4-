@@ -1,0 +1,39 @@
+app.background = 'black'
+
+# lightbulb
+Rect(150, 0, 100, 20, fill='darkGrey', border='black')
+Rect(150, 20, 100, 20, fill='darkGrey', border='black')
+Rect(150, 40, 100, 25, fill='darkGrey', border='black')
+Rect(150, 65, 100, 40, fill='silver', opacity=95)
+Circle(200, 200, 110, fill=gradient('white', 'silver'))
+Line(147, 189, 190, 95, fill='gray', opacity=50)
+Line(210, 95, 252, 189, fill='gray', opacity=50)
+Line(147, 189, 252, 189, fill='gray', opacity=50)
+Line(190, 95, 190, 65, fill='gray', opacity=50)
+Line(210, 95, 210, 65, fill='gray', opacity=50)
+
+bulb = Star(200, 200, 200, 500, fill=gradient('white', 'yellow', 'black'),
+            opacity=0)
+bulb.isOn = False
+
+# switch
+string = Line(350, 0, 350, 50, fill='silver', lineWidth=10)
+stringEnd = Circle(350, 50, 20, fill=gradient('white', 'silver'))
+
+def onMousePress(mouseX, mouseY):
+    # onMousePress currently only turns the lightbulb off. Change it so that it
+    # alternates between the light being on and off.
+    ### (HINT: The lightbulb has a custom property .isOn that is either
+    #          True or False. Use this to determine whether to turn it off
+    #          or on.)
+    ### Fix Your Code Here ###
+    if(bulb.isOn == True):
+      bulb.opacity = 0
+      string.y2 = 50
+      stringEnd.centerY = 50
+      bulb.isOn = False
+    else:
+      bulb.opacity = 50
+      string.y2 = 300
+      stringEnd.centerY = 300
+      bulb.isOn = True 
