@@ -1,0 +1,16 @@
+app.background = 'dodgerBlue'
+
+ball = Circle(200, 0, 40, fill=gradient('red', 'darkRed', start='left-top'))
+
+def onMousePress(mouseX, mouseY):
+    # Move the ball to the top of the canvas, above the mouse.
+    ### Place Your Code Here ###
+    ball.centerX = mouseX 
+    ball.centerY = 0
+    pass
+
+def onMouseMove(mouseX, mouseY):
+    # Move the ball down by 20.
+    ### Place Your Code Here ###
+    ball.centerY= ball.centerY + 20 
+    pass
