@@ -1,0 +1,28 @@
+app.background = 'violet'
+app.stepsPerSecond = 2
+
+# face
+Oval(180, 240, 350, 375, fill='tan')
+Oval(160, 280, 20, 80, fill='beige', rotateAngle=30)
+Oval(160, 360, 100, 50, fill='antiqueWhite', border='red', borderWidth=5)
+
+# hypnotized eyes
+eyes = Group(
+    Circle(100, 200, 60, fill='white'), Circle(100, 200, 45),
+    Circle(100, 200, 30, fill='white'), Circle(100, 200, 15),
+
+    Circle(250, 200, 60, fill='white'), Circle(250, 200, 45),
+    Circle(250, 200, 30, fill='white'), Circle(250, 200, 15),
+    )
+
+def onStep():
+    # If a circle in the eyes group is currently white, make it black. If it is
+    # black, make it white.
+    ### Place Your Code Here ###
+    for eye in eyes:
+        if(eye.fill == 'black'):
+           eye.fill = 'white'
+        else:
+            eye.fill = 'black'
+        
+    pass
