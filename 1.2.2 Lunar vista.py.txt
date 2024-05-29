@@ -1,0 +1,23 @@
+# background
+app.background = 'black'
+Circle(950, 200, 800, fill=gradient('gold', 'black'))
+
+# Draws the stars on the left.
+Star(55, 330, 16, 4, fill='lightCyan')
+Star(80, 80, 8, 4, fill='antiqueWhite')
+
+# Draw the star on the right.
+### Place Your Code Here ###
+
+# Draw the planet and the shadow of the moon.
+### (HINT: Notice which shape is used to make the shadow!)
+### Place Your Code Here ###
+Circle(200, 200, 100, fill=gradient('chocolate', 'maroon','black'))
+Circle(275, 170, 30, 2000,  fill='black')
+# Draws the moon.
+Circle(300, 160, 30, fill=gradient('dimGray', 'beige', start='left'))
+
+# Draws the moon's craters
+Circle(315, 155, 5, fill=gradient('darkGray', 'beige', start='right'))
+Circle(290, 150, 4, fill=gradient('dimGray', 'lightGray', start='right'))
+Circle(295, 170, 5, fill=gradient('gray', 'gainsboro', start='right'))
