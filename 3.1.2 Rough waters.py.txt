@@ -1,0 +1,33 @@
+app.background = 'skyBlue'
+
+boat = Oval(200, 130, 200, 150, fill='brown')
+boat.rotateSpeed = 1
+cover = Oval(200, 95, 350, 85, fill='skyBlue')
+
+# water
+Rect(0, 175, 400, 225, fill='dodgerBlue', opacity=60)
+
+wave1 = Star(75, 300, 145, 15, fill='steelBlue', opacity=40, roundness=95)
+wave2 = Star(200, 300, 145, 15, fill='steelBlue', opacity=40, roundness=95)
+wave3 = Star(325, 300, 145, 15, fill='steelBlue', opacity=40, roundness=95)
+
+def onStep():
+    # This rotates the boat and the oval covering the top half of the boat.
+    boat.rotateAngle = boat.rotateAngle + boat.rotateSpeed
+    cover.rotateAngle = cover.rotateAngle + boat.rotateSpeed
+
+    # When the boat rotates too far in either direction, change the boat's
+    # rotateSpeed.
+    ### (HINT: Use the inspector to see just how big and small the rotateAngle
+    #          gets in the solution!)
+    ### Place Your Code Here ###
+    if (boat.rotateAngle > 10):
+        boat.rotateSpeed = -1
+    if (boat.rotateAngle < -10):
+        boat.rotateSpeed = 1
+        
+
+    # This creates the wave effect.
+    wave1.rotateAngle += 2
+    wave2.rotateAngle += 2
+    wave3.rotateAngle += 2
