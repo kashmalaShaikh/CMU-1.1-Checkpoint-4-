@@ -1,0 +1,9 @@
+app.background = 'black'
+
+pointyStar = Star(200, 200, 150, 5, fill=gradient('springGreen', 'deepSkyBlue'))
+
+def onKeyPress(key):
+    # When any key is pressed, increase the number of points in pointyStar.
+    ### Place Your Code Here ###
+    pointyStar.points +=1
+    pass
