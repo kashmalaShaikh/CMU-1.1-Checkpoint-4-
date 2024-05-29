@@ -1,0 +1,16 @@
+# This draws the face.
+Rect(0, 0, 400, 400, fill='papayaWhip')
+
+# This draws the eyes.
+Rect(55, 150, 80, 30)
+Rect(265, 150, 80, 30)
+
+# This draws the mouth.
+Rect(150, 300, 100, 10)
+Rect(180, 320, 40, 20)
+
+# Use 3 rectangles to draw the glasses over the eyes.
+### Place Your Code Here ###
+Rect(20, 130, 150, 100, fill= 'saddleBrown', opacity=60)
+Rect(230, 130, 150, 100, fill= 'saddleBrown', opacity=60)
+Rect(170, 175, 60, 10, fill= 'maroon')
