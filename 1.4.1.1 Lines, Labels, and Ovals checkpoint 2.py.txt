@@ -1,0 +1,17 @@
+app.background = 'hotPink'
+
+# This draws the mouth.
+Oval(200, 335, 50, 100)
+
+# This draws the left eye.
+Oval(100, 140, 150, 250)
+Oval(100, 185, 120, 150, fill=gradient('cyan', 'blue', 'black', start='bottom'))
+Oval(100, 100, 120, 150)
+Oval(100, 80, 90, 115, fill='white')
+
+# Draw the eye on the right using 4 ovals.
+### Place Your Code Here ###
+Oval(300, 140, 150, 250)
+Oval(300, 185, 120, 150, fill=gradient('cyan', 'blue', 'black', start='bottom'))
+Oval(300, 100, 120, 150)
+Oval(300, 80, 90, 115, fill='white')
