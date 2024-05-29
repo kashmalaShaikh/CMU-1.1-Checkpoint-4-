@@ -1,0 +1,22 @@
+app.background = gradient('blueViolet', 'darkViolet', start='left')
+
+greenRect = Rect(0, 150, 10, 100,
+                 fill=gradient('paleTurquoise', 'turquoise', start='left'))
+greenRect.widthSpeed = 2
+
+pinkRect = Rect(150, 0, 100, 400, fill=gradient('pink', 'hotPink', start='top'))
+pinkRect.heightSpeed = -4
+
+def onStep():
+    # This increases the green rectangle's width.
+    greenRect.width = greenRect.width + greenRect.widthSpeed
+    if (greenRect.width > 400):
+        greenRect.width = 10
+
+    # Decrease the pink rectangle's height. When the height is less than 5,
+    # reset it!
+    ### (HINT: We defined a custom property for the pink rectangle above!)
+    ### Place Your Code Here ###
+    pinkRect.height = pinkRect.height + pinkRect.heightSpeed
+    if (pinkRect.height < 5):
+        pinkRect.height = 400
