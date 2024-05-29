@@ -1,0 +1,12 @@
+app.background = gradient('black', rgb(50, 50, 70), start='top')
+
+ghost = Group(
+    Circle(200, 200, 20, fill='skyBlue'),
+    Rect(180, 200, 40, 20, fill='skyBlue'),
+    Circle(185, 220, 5, fill='skyBlue'),
+    Circle(195, 220, 5, fill='skyBlue'),
+    Circle(205, 220, 5, fill='skyBlue'),
+    Circle(215, 220, 5, fill='skyBlue'),
+    Circle(190, 200, 5),
+    Circle(210, 200, 5)
+    )
