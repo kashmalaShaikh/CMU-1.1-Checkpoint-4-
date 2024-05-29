@@ -1,0 +1,16 @@
+# This draws the background.
+app.background = 'skyBlue'
+Rect(0, 280, 400, 120, fill='forestGreen')
+
+# This draws the head, body, and legs.
+Circle(150, 250, 20)
+Line(150, 250, 185, 165)
+Line(185, 165, 150, 105)
+Line(185, 165, 250, 135)
+
+# Draw the arms of the stick figure.
+### (HINT: It doesn't matter which point you use first for a line. Either
+#          way will work.)
+### Place Your Code Here ###
+Line(100, 250, 165, 210)
+Line(185, 280, 165, 210)
