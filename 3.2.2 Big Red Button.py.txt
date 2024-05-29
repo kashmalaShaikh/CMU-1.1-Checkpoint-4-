@@ -1,0 +1,29 @@
+app.background = gradient('silver', 'dimGrey', start='left-top')
+
+# button
+Label('Do Not Press!', 200, 380, fill='crimson', size=30, bold=True)
+Circle(200, 215, 140, fill='silver',
+       border=gradient('silver', 'grey', start='left-top'), borderWidth=25)
+Oval(200, 215, 215, 200, fill=gradient('red', 'darkRed', start='left-top'))
+
+Line(50, 65, 350, 65, fill='dimGrey', lineWidth=10)
+cover = Rect(50, 65, 300, 300, fill='lightGrey', border='white', opacity=40)
+
+def onKeyPress(key):
+    # When the enter key is pressed, flip the cover off the button.
+    ### (HINT: To do this, change the cover's height and set its centerY to 35.)
+    ### Place Your Code Here ###
+    if (key == "enter"):
+        cover.height = 50
+        cover.centerY = 35
+
+    pass
+
+def onMousePress(mouseX, mouseY):
+    # If the button is not covered, turn off the lights by drawing a black
+    # rectangle over the canvas.
+    ### (HINT: The button is not covered if the cover height has been changed!)
+    ### Place Your Code Here ###
+    if (cover.height==50):
+        Rect(0, 0, 400, 400, opacity = 80)
+    pass
