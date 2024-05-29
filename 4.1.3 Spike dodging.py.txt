@@ -1,0 +1,46 @@
+app.background = gradient('lavenderBlush', 'cornSilk', 'salmon')
+
+# This draws the spiky obstacles.
+
+left1 = Star(140, 125, 75, 4, fill=gradient('silver', 'black'), roundness=10)
+left2 = Star(140, 275, 75, 4, fill=gradient('silver', 'black'), roundness=10)
+right1 = Star(280, 125, 75, 4, fill=gradient('silver', 'black'), roundness=10,
+              rotateAngle=30)
+right2 = Star(280, 275, 75, 4, fill=gradient('silver', 'black'), roundness=10,
+              rotateAngle=-30)
+left1.rotateSpeed = 3
+right1.rotateSpeed = 4
+
+# Create a group to store all of the spikes.
+### Place Your Code Here ###
+spikes = Group (
+    left1,
+    left2,
+    right1,
+    right2, 
+    )
+# our brave little travelling ball
+ball = Circle(0, 200, 22, fill=gradient('peru', 'maroon', start='left'))
+ball.speedX = 4
+
+def onMousePress(mouseX, mouseY):
+    # Resets the ball's position.
+    ball.centerX = 0
+    ball.speedX = 4
+
+def onStep():
+    # This moves the ball and rotates the spikes.
+    ball.centerX = ball.centerX + ball.speedX
+
+    left1.rotateAngle = left1.rotateAngle - left1.rotateSpeed
+    left2.rotateAngle = left2.rotateAngle + left1.rotateSpeed
+    right1.rotateAngle = right1.rotateAngle - right1.rotateSpeed
+    right2.rotateAngle = right2.rotateAngle + right1.rotateSpeed
+
+    # If the ball hits a spike, make it stop.
+    ### Place Your Code Here ###
+    if (spikes.hitsShape(ball)== True):
+        ball.speedX = 0 
+    # This resets the ball's position.
+    if (ball.centerX > 425):
+        ball.centerX = 0
