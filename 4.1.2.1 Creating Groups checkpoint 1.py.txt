@@ -1,0 +1,36 @@
+app.background = 'black'
+
+skyFeatures = Group()
+
+Circle(200, 800, 450, fill='darkGreen')
+
+def onMouseMove(mouseX, mouseY):
+    # Depending on if it's night or day, add either a star or a cloud, to the
+    # skyFeatures group.
+    ### (HINT: You can use the color of app.background to find if it day or
+    #          night!)
+    ### Fix Your Code Here ###
+    if(app.background== 'black'):
+       skyFeatures.add(
+       Star(mouseX, mouseY, 3, 4, fill ='white')
+       )
+    if(app.background== 'lightBlue'):
+      skyFeatures.add(
+      Oval(mouseX, mouseY, 30, 20, opacity=80, fill ='grey')
+      )
+    pass
+
+def onKeyPress(key):
+    # When any key is pressed, remove all the shapes in the skyFeatures group.
+    ### Place Your Code Here ###
+    if(key == key):
+        skyFeatures.clear()
+    # This changes the background.
+    if (app.background == 'black'):
+        app.background = 'lightBlue'
+    else:
+        app.background = 'black'
+
+def onStep():
+    # This moves the shapes in the background.
+    skyFeatures.centerX = skyFeatures.centerX + 1
