@@ -1,0 +1,52 @@
+app.stepsPerSecond = 60
+
+# This draws the fire place and tv.
+Rect(0, 0, 400, 360, fill='peachPuff')
+Rect(100, 170, 200, 190, fill=gradient('sandyBrown', 'fireBrick', 'maroon'),
+     border='maroon', borderWidth=20)
+Rect(120, 45, 160, 100, fill=gradient('gray', 'black'), border='black',
+     borderWidth=10)
+Rect(0, 340, 400, 60,
+     fill=gradient('chocolate', 'orange', 'white', start='top'))
+Star(155, 305, 40, 3,
+     fill=gradient('white', 'yellow', 'orange', 'red', start='bottom'))
+Star(190, 300, 70, 3,
+     fill=gradient('white', 'yellow', 'orange', 'red', start='bottom'))
+Star(230, 300, 40, 3,
+     fill=gradient('white', 'yellow', 'orange', 'red', start='bottom'))
+Rect(120, 310, 160, 30,
+     fill=gradient('sienna', 'sandyBrown', 'gold', start='bottom'))
+
+# This draws the window.
+Rect(0, 0, 400, 400, opacity=40,
+     fill=gradient('white', 'grey', 'white', 'dimGrey', start='left-top'))
+Line(20, 200, 380, 200, fill='sienna', lineWidth=10)
+Line(200, 20, 200, 380, fill='sienna', lineWidth=10)
+Line(0, 10, 400, 10, fill='sienna', lineWidth=20)
+Line(0, 390, 400, 390, fill='sienna', lineWidth=20)
+Line(10, 0, 10, 400, fill='sienna', lineWidth=20)
+Line(390, 0, 390, 400, fill='sienna', lineWidth=20)
+
+raindrops = Group()
+raindrops.mouseX = 200
+raindrops.stepsSinceLastDrop = 0
+
+def onMouseMove(mouseX, mouseY):
+    # This keeps track of where the mouse is.
+    raindrops.mouseX = mouseX
+
+def onStep():
+    # Move every drop down by 4, and remove it from the group if its center
+    # reaches the edge of the canvas.
+    ### Place Your Code Here ###
+    for raindrop in raindrops:
+        raindrop.centerY += 4 
+        if(raindrop.centerY == 400):
+            raindrops.remove(raindrop)
+    # This adds a new rain drop every 3 steps.
+    raindrops.stepsSinceLastDrop = raindrops.stepsSinceLastDrop + 1
+    if (raindrops.stepsSinceLastDrop == 3):
+        raindrops.add(
+            Circle(raindrops.mouseX, 1, 5, fill='skyBlue')
+            )
+        raindrops.stepsSinceLastDrop = 0
