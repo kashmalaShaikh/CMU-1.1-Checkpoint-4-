@@ -1,0 +1,29 @@
+app.background = 'lightGrey'
+
+Rect(10, 20, 380, 360, fill='saddleBrown')
+
+# This draws the mattress.
+Rect(30, 225, 340, 175, fill='ghostWhite')
+Line(55, 230, 0, 410, fill='ghostWhite', lineWidth=55)
+Line(345, 230, 400, 410, fill='ghostWhite', lineWidth=55)
+
+# This draws the blanket.
+Rect(0, 295, 400, 165, fill='steelBlue')
+Rect(0, 295, 400, 25, fill='lightBlue')
+
+def onMousePress(mouseX, mouseY):
+    # This draws the center of the pillow.
+    Circle(mouseX, mouseY, 33, fill='lightCyan')
+
+    # This draws the top half of the pillow.
+    Star(mouseX - 25, mouseY - 25, 30, 3, fill='bisque', rotateAngle=-45)
+    Star(mouseX + 25, mouseY - 25, 30, 3, fill='bisque', rotateAngle=45)
+    Star(mouseX - 25, mouseY + 25, 30, 3, fill='bisque', rotateAngle=-15)
+    Star(mouseX  + 25, mouseY + 25, 30, 3, fill='bisque', rotateAngle=15)
+    # Draw the bottom half of the pillow.
+    ### Place Your Code Here ###
+     
+     
+
+    
+    
