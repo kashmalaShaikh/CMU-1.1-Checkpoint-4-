@@ -1,0 +1,26 @@
+app.background = 'lightPink'
+
+# donut box
+Rect(40, 60, 320, 225, fill='lightGrey', border='grey', borderWidth=15)
+
+donuts = Group(
+    Circle(100, 125, 40, fill=None, border='tan', borderWidth=20),
+    Circle(200, 125, 40, fill=None, border='moccasin', borderWidth=20),
+    Circle(300, 125, 40, fill=None, border='antiqueWhite', borderWidth=20),
+    Circle(100, 220, 40, fill=None, border='peru', borderWidth=20),
+    Circle(200, 220, 40, fill=None, border='paleVioletRed', borderWidth=20),
+    Circle(300, 220, 40, fill=None, border='sandyBrown', borderWidth=20)
+    )
+
+def onMousePress(mouseX, mouseY):
+    # Add the frosting to the correct donuts.
+    ### (HINT: Drawing all of the frosting 1-by-1 would be tiring. Instead,
+    #          loop over the donuts and draw the frosting depending on if
+    #          each donut is in the top or bottom half of the box!)
+    ### Fix Your Code Here ###
+    Star(200, 125, 35, 10, fill=None, border='magenta', roundness=80, opacity=20)
+    Star(200, 220, 35, 50, fill=None, border='cornSilk', roundness=80, opacity=50)
+    Star(100, 125, 35, 10, fill=None, border='magenta', roundness=80, opacity=20)
+    Star(100, 220, 35, 50, fill=None, border='cornSilk', roundness=80, opacity=50)
+    Star(300, 125, 35, 10, fill=None, border='magenta', roundness=80, opacity=20)
+    Star(300, 220, 35, 50, fill=None, border='cornSilk', roundness=80, opacity=50)
